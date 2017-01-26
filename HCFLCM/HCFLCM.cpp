@@ -23,8 +23,8 @@ int main() {
 //	cout << endl << "[DEBUG] " << var;
 //	cout << endl << "[DEBUG] FLAG!";
 
-	for (int iCounter = 0; iCounter < vPFNum1.size(); ++iCounter) {
-		for (int iCounter2 = 0; iCounter2 < vPFNum2.size(); ++iCounter2) {
+	for (unsigned iCounter = 0; iCounter < vPFNum1.size(); ++iCounter) {
+		for (unsigned iCounter2 = 0; iCounter2 < vPFNum2.size(); ++iCounter2) {
 			if (vPFNum1[iCounter] == vPFNum2[iCounter2]) {
 				vPFBoth.push_back(vPFNum2[iCounter2]);
 				
@@ -39,17 +39,16 @@ int main() {
 	unsigned HCF = 1;
 	unsigned LCM = 1;
 
-	cout << endl << "[DEBUG] FLAG!";
+	cout << endl << "[DEBUG] " << (0 < vPFBoth.size());
 
-	for (int iCounter = 0; iCounter < vPFBoth.size(); ++iCounter) {
+	for (unsigned iCounter = 0; iCounter < vPFBoth.size(); ++iCounter) {
 		HCF *= vPFBoth[iCounter];
 	}
 
-
-	for (int iCounter = 0; iCounter < vPFNum1.size(); ++iCounter) {
+	for (unsigned iCounter = 0; iCounter < vPFNum1.size() && !vPFNum1.empty(); ++iCounter) {
 		LCM *= vPFNum1[iCounter];
 	}
-	for (int iCounter = 0; iCounter < vPFNum2.size(); ++iCounter) {
+	for (unsigned iCounter = 0; iCounter < vPFNum2.size() && !vPFNum2.empty(); ++iCounter) {
 		LCM *= vPFNum1[iCounter];
 	}
 	if (HCF != 0) {
@@ -59,6 +58,9 @@ int main() {
 	cout << endl << "Highest Common Factor: " << HCF;
 	cout << endl << "Lowest Common Multiple: " << LCM;
 
-//	cin.get();
+	std::string tmp;
+	cin.clear();
+	cin >> tmp;
+
 	return 0;
 }

@@ -16,7 +16,7 @@ bool isprime(const unsigned iNumber) {
 		return false;
 	}
 
-	for (int iCounter = 6; (iCounter - 1) <= sqrt(iNumber); iCounter += 6) {
+	for (unsigned iCounter = 6; (iCounter - 1) <= sqrt(iNumber); iCounter += 6) {
 		if (iNumber % (iCounter - 1) == 0 || iNumber % (iCounter + 1) == 0) {
 			return false;
 		}
