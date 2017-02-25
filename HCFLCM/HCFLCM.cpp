@@ -39,7 +39,7 @@ int main() {
 	unsigned HCF = 1;
 	unsigned LCM = 1;
 
-	cout << endl << "[DEBUG] " << (0 < vPFBoth.size());
+	//cout << endl << "[DEBUG] " << (0 < vPFBoth.size());
 
 	for (unsigned iCounter = 0; iCounter < vPFBoth.size(); ++iCounter) {
 		HCF *= vPFBoth[iCounter];
@@ -58,9 +58,8 @@ int main() {
 	cout << endl << "Highest Common Factor: " << HCF;
 	cout << endl << "Lowest Common Multiple: " << LCM;
 
-	std::string tmp;
-	cin.clear();
-	cin >> tmp;
+	cout << endl << endl;
+	system("pause");
 
 	return 0;
 }
